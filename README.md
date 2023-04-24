@@ -24,12 +24,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](design/screenshot.jpg)
+(design/screenshot.jpg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://glittery-cucurucho-5cd0d8.netlify.app/)
 
 ## My process
 
