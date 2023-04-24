@@ -1,0 +1,288 @@
+:root {
+  --clr-primary-200: hsl(225, 100%, 100%);
+  --clr-primary-400: hsl(230, 100%, 98%);
+  --clr-primary-600: hsl(244, 83%, 68%);
+  --clr-primary-800: hsl(245, 75%, 52%);
+
+  --clr-neutral-200: hsl(225, 100%, 98%);
+  --clr-neutral-400: hsl(223, 100%, 94%);
+  --clr-neutral-600: hsl(224, 23%, 55%);
+  --clr-neutral-800: hsl(223, 47%, 23%);
+
+  --fs-300: 0.875rem;
+  --fs-400: 1rem;
+  --fs-700: 1.75rem;
+
+  --fw-400: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+
+  --space-top-200: 0.875em;
+  --space-bottom-200: 0.875em;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-image: url("images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: center -20.25rem;
+  background-size: cover;
+  background-color: var(--clr-neutral-400);
+  color: var(--clr-neutral-600);
+  font-family: "Red Hat Display", sans-serif;
+  font-size: var(--fs-400);
+  font-weight: var(--fw-400);
+  line-height: 1.6rem;
+  /* for demo only */
+  display: grid;
+  place-items: center;
+}
+
+h2 {
+  font-size: var(--fs-700);
+  color: var(--clr-neutral-800);
+}
+
+/* Utility */
+
+/** Colors **/
+
+.blue-neutral-200 {
+  color: var(--clr-neutral-200);
+}
+
+.blue-neutral-400 {
+  color: var(--clr-neutral-600);
+}
+
+.blue-primary-400 {
+  color: var(--clr-primary-400);
+}
+
+.bg-blue-neutral-200 {
+  background-color: var(--clr-neutral-200);
+}
+
+.bg-blue-neutral-400 {
+  background-color: var(--clr-neutral-600);
+}
+
+.bg-blue-neutral-100 {
+  background-color: var(--clr-neutral-100);
+}
+
+.bg-blue-primary-200 {
+  background-color: var(--clr-primary-200);
+}
+
+.bg-blue-primary-400 {
+  background-color: var(--clr-primary-400);
+}
+
+.box-shadow {
+  -webkit-box-shadow: 0px 28px 26px -5px rgba(223, 230, 252, 1);
+  -moz-box-shadow: 0px 28px 26px -5px rgba(223, 230, 252, 1);
+  box-shadow: 0px 28px 26px -5px rgba(223, 230, 252, 1);
+}
+
+/** Borders **/
+
+.br-1 {
+  border-radius: 0.5rem;
+}
+
+.br-2 {
+  border-radius: 1rem;
+}
+
+/** Spacings **/
+
+.margin-top-16 {
+  margin-top: 1rem;
+}
+
+.padding-24 {
+  padding: 1.5rem;
+}
+
+.padding-48 {
+  padding: 3rem;
+}
+
+.space-bottom-200 > :where(:not(:last-child)) {
+  margin-bottom: var(--space-top-200);
+}
+
+/** Text styles and colors  **/
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: start;
+}
+
+.text-right {
+  text-align: end;
+}
+
+.text-bold {
+  font-weight: var(--fw-700);
+}
+
+.text-black {
+  font-weight: var(--fw-900);
+}
+
+.text-neutral-400 {
+  color: var(--clr-neutral-600);
+}
+
+.text-neutral-800 {
+  color: var(--clr-neutral-800);
+}
+
+/* Composition */
+
+.push-right {
+  margin-left: auto;
+}
+
+.flex-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.card {
+  display: grid;
+  max-width: 450px;
+  overflow: hidden;
+}
+
+/* Blocks */
+
+.btn,
+.link {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn[data-type="primary"] {
+  background-color: var(--clr-primary-800);
+  border-radius: 0.5rem;
+  color: var(--clr-primary-200);
+  -webkit-box-shadow: 0px 24px 16px -5px rgba(223, 230, 252, 1);
+  -moz-box-shadow: 0px 24px 16px -5px rgba(223, 230, 252, 1);
+  box-shadow: 0px 24px 16px -5px rgba(223, 230, 252, 1);
+  padding: 1em 2em;
+  width: 100%;
+}
+
+.link {
+  color: var(--clr-primary-800);
+  font-weight: var(--fw-700);
+  text-decoration: underline;
+}
+
+.btn-dark-blue-text {
+  color: var(--clr-neutral-600);
+  font-weight: var(--fw-700);
+}
+
+.link,
+.btn[data-type="primary"],
+.btn-dark-blue-text {
+  transition: background-color 0.2s ease-out;
+}
+
+.btn[data-type="primary"]:hover,
+.btn[data-type="primary"]:focus {
+  background-color: var(--clr-primary-600);
+}
+
+.link:hover,
+.link:focus {
+  color: var(--clr-primary-600);
+}
+
+.btn-dark-blue-text:hover,
+.btn-dark-blue-text:focus {
+  color: var(--clr-neutral-800);
+}
